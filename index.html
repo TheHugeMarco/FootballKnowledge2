@@ -1,0 +1,127 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Knowledge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="intro-screen" onclick="startApp()">
+    <h1><span class="ball">O</span>OTBALL <span class="ball">O</span>NOWLEDGE</h1>
+    <p class="tap">Tap to Start</p>
+  </div>
+  <div id="main-menu" class="hidden">
+    <button onclick="window.location.href='cpu.html'">Gioca contro il Computer</button>
+    <button onclick="window.location.href='multiplayer.html'">Multiplayer Online</button>
+    <button onclick="window.location.href='11v11.html'">Modalità 11vs11</button>
+  </div>
+  <script>
+    function startApp() {
+      document.querySelector('.intro-screen').style.display = 'none';
+      document.getElementById('main-menu').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
+
+<!-- cpu.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vs Computer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <div id="field-cpu"></div>
+    <div id="game-ui"></div>
+  </div>
+  <script src="cpu.js"></script>
+</body>
+</html>
+
+<!-- multiplayer.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiplayer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <div id="field-multiplayer"></div>
+    <div id="game-ui"></div>
+  </div>
+  <script src="multiplayer.js"></script>
+</body>
+</html>
+
+<!-- 11v11.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11 vs 11</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <div id="field-11"></div>
+    <div id="game-ui"></div>
+  </div>
+  <script src="11v11.js"></script>
+</body>
+</html>
+
+/* style.css */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #2e7d32, #1b5e20);
+  color: white;
+  text-align: center;
+}
+.intro-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.ball {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url('ball.png');
+  background-size: cover;
+  vertical-align: middle;
+  margin: 0 0.1em;
+}
+.tap {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+.hidden {
+  display: none;
+}
+#main-menu button {
+  display: block;
+  margin: 1em auto;
+  padding: 1em 2em;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 1rem;
+  color: white;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+}
