@@ -1,0 +1,184 @@
+/* style.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #2e7d32, #1b5e20); /* verde campo */
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 0.8em 1.6em;
+  margin: 0.5em;
+  border: 2px solid white;
+  border-radius: 1.5em;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+input[type=\"text\"] {
+  padding: 0.6em;
+  font-size: 1.1rem;
+  border-radius: 1em;
+  border: none;
+  margin: 0.5em;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Intro screen */
+.intro-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.tap {
+  font-size: 1.2rem;
+  margin-top: 1em;
+  opacity: 0.8;
+}
+
+.ball {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  background-image: url('ball.png');
+  background-size: cover;
+  vertical-align: middle;
+}
+
+/* Game screen */
+.game-screen {
+  padding: 1em;
+}
+
+.field-container,
+.field-container.vertical,
+.field-container-horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border: 2px solid white;
+  margin: 1em auto;
+  background: #388e3c;
+  border-radius: 1em;
+  padding: 1em;
+  width: 90%;
+  max-width: 600px;
+  aspect-ratio: 2/3;
+}
+
+.field-container-horizontal {
+  flex-direction: row;
+  aspect-ratio: 3/2;
+}
+
+.field-center-line {
+  width: 100%;
+  height: 4px;
+  background: white;
+  margin: 1em 0;
+}
+
+.player-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+
+.info-box {
+  background: rgba(255,255,255,0.1);
+  padding: 0.5em;
+  border-radius: 0.5em;
+  min-height: 1.5em;
+}
+
+/* Score & Timer */
+#game-stats, #turn-timer {
+  margin-top: 1em;
+  font-size: 1rem;
+}
+
+/* 11v11 */
+.team-side {
+  width: 50%;
+  padding: 1em;
+}
+
+.formation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.formation-grid div {
+  background: rgba(255,255,255,0.1);
+  border-radius: 0.4em;
+  padding: 0.5em;
+  min-height: 2em;
+}
+
+/* Chat */
+#chat-toggle {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+#chat-box {
+  position: fixed;
+  bottom: 3.5em;
+  right: 1em;
+  width: 250px;
+  background: rgba(0,0,0,0.8);
+  padding: 0.5em;
+  border-radius: 1em;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#chat-messages {
+  text-align: left;
+  font-size: 0.9rem;
+  margin-bottom: 0.5em;
+}
+
+#chat-input {
+  width: 70%;
+  padding: 0.4em;
+  font-size: 1rem;
+  border-radius: 0.5em;
+  border: none;
+}
+
+#chat-box button {
+  padding: 0.4em 0.8em;
+  font-size: 0.9rem;
+  margin-left: 0.5em;
+}
