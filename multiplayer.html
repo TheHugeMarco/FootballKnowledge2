@@ -1,0 +1,46 @@
+<!-- multiplayer.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiplayer Online - Football Knowledge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-screen">
+    <!-- Campo da calcio con vista variabile -->
+    <div class="field-container" id="field-multiplayer">
+      <!-- Giocatori disposti attorno al centrocampo -->
+      <div id="players-area"></div>
+      <div class="field-center-line"></div>
+    </div>
+
+    <!-- Info del turno corrente -->
+    <div id="turn-info">
+      <p id="current-player-name">Giocatore 1</p>
+      <p id="current-question">Inserisci una squadra dove ha giocato...</p>
+      <input type="text" id="answer-input" placeholder="Scrivi qui..." autocomplete="off" />
+      <button onclick="submitMultiplayerAnswer()">Invia</button>
+    </div>
+
+    <!-- Punteggi -->
+    <div id="scoreboard">
+      <ul id="score-list"></ul>
+    </div>
+
+    <!-- Timer -->
+    <div id="turn-timer">Tempo: <span id="time-left">20</span>s</div>
+
+    <!-- Chat -->
+    <div id="chat-toggle" onclick="toggleChat()">💬</div>
+    <div id="chat-box" class="hidden">
+      <ul id="chat-messages"></ul>
+      <input type="text" id="chat-input" placeholder="Scrivi un messaggio..." />
+      <button onclick="sendChat()">Invia</button>
+    </div>
+  </div>
+
+  <script src="multiplayer.js"></script>
+</body>
+</html>
