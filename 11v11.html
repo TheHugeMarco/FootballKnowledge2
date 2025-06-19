@@ -1,0 +1,49 @@
+<!-- 11v11.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modalità 11 vs 11 - Football Knowledge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-screen">
+    <div class="match-info">
+      <h2 id="match-title">Finale Champions League 2005</h2>
+      <p id="match-details">Liverpool vs Milan • 3-3 • Formazione: 4-4-2</p>
+    </div>
+
+    <div class="field-container-horizontal">
+      <div class="team-side" id="team-left">
+        <h3>Liverpool</h3>
+        <div class="formation-grid" id="left-grid">
+          <!-- 11 slot per la squadra -->
+        </div>
+      </div>
+      <div class="team-side" id="team-right">
+        <h3>Milan</h3>
+        <div class="formation-grid" id="right-grid">
+          <!-- 11 slot per la squadra -->
+        </div>
+      </div>
+    </div>
+
+    <div class="answer-section">
+      <input type="text" id="player-input" placeholder="Scrivi un nome di giocatore..." autocomplete="off" />
+      <button onclick="submitPlayer()">Invia</button>
+      <button onclick="useHint()">Aiuto</button>
+      <div id="hint-box"></div>
+    </div>
+
+    <div id="stats-11v11">
+      <p>Giocatori indovinati: <span id="guessed-count">0</span>/22</p>
+      <p>Tentativi rimasti: <span id="attempts-left">10</span></p>
+    </div>
+
+    <div id="end-message" class="hidden"></div>
+  </div>
+
+  <script src="11v11.js"></script>
+</body>
+</html>
